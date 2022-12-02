@@ -1,0 +1,12 @@
+[package]
+name = "actix-sea-orm-example"
+version = "0.1.0"
+authors = ["zhouyi"]
+edition = "2021"
+publish = false
+
+[workspace]
+members = [".", "api", "core", "entity"]
+
+[dependencies]
+api = { path = "api" }

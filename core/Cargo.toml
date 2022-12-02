@@ -1,0 +1,22 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+entity = { path = "../entity" }
+serde = { version = "1", features = ["derive"] }
+chrono = "0.4.22"
+rust_decimal = "1.10.1"
+
+[dependencies.sea-orm]
+version = "^0.10.3" # sea-orm version
+features = [
+    "debug-print",
+    "runtime-async-std-native-tls",
+    # "sqlx-mysql",
+    "sqlx-postgres",
+    # "sqlx-sqlite",
+]
